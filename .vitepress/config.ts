@@ -3,9 +3,10 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Compdown',
   description: 'A natural language for After Effects',
+  base: '/docs/',
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/docs/favicon.ico' }],
   ],
 
   themeConfig: {
