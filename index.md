@@ -47,5 +47,5 @@ compositions:
 This creates a composition with a dark solid background and centered text. That's it — no scripting, no clicking through menus.
 
 <div style="margin-top: 2rem; text-align: center;">
-  <a href="/guide/" style="display: inline-block; padding: 0.75rem 1.5rem; background: var(--vp-c-brand-1); color: white; border-radius: 8px; text-decoration: none; font-weight: 500;">Read the Guide →</a>
+  <a href="./guide/" style="display: inline-block; padding: 0.75rem 1.5rem; background: var(--vp-c-brand-1); color: white; border-radius: 8px; text-decoration: none; font-weight: 500;">Read the Guide →</a>
 </div>
