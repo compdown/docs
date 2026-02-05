@@ -16,7 +16,7 @@ hero:
 features:
   - icon: 📖
     title: Readable
-    details: Elegant syntax that stays clean when you ship it across teams
+    details: An elegant syntax that's simple to read and write
   - icon: 🔗
     title: Shareable
     details: Save it, gist it, email it, or drop it in a repo. Text travels well
