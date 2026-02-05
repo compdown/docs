@@ -9,7 +9,7 @@ pnpm install
 pnpm docs:dev
 ```
 
-Opens at http://localhost:5173
+Opens at `localhost:5173`
 
 ## Build
 
