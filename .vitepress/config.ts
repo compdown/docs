@@ -14,6 +14,7 @@ export default defineConfig({
       { text: 'Guide', link: '/guide/' },
       { text: 'Reference', link: '/reference/' },
       { text: 'Examples', link: '/examples/' },
+      { text: 'compdown.com', link: 'https://compdown.com' },
     ],
 
     sidebar: [
