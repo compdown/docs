@@ -64,6 +64,13 @@ compositions:
     height: 1080
     duration: 10
     layers:
+      - name: overlay
+        type: solid
+        color: 2c3e50
+        blendingMode: overlay
+        transform:
+          opacity: 30
+
       - name: bg
         type: solid
         color: 34495e
@@ -84,13 +91,6 @@ compositions:
               easing: easeInOut
             - time: 10
               value: [100, 100]
-
-      - name: overlay
-        type: solid
-        color: 2c3e50
-        blendingMode: overlay
-        transform:
-          opacity: 30
 ```
 
 ## Wiggle with expressions
@@ -162,16 +162,18 @@ compositions:
     height: 1080
     duration: 10
     layers:
-      # Back layer - slowest
-      - name: layer 3
+      # Front layer - fastest
+      - name: layer 1
         type: solid
-        color: 1a1a2e
+        color: 34495e
+        blendingMode: screen
         transform:
+          opacity: 20
           position:
             - time: 0
               value: [960, 540]
             - time: 10
-              value: [1000, 560]
+              value: [1160, 680]
 
       # Middle layer
       - name: layer 2
@@ -186,18 +188,16 @@ compositions:
             - time: 10
               value: [1060, 600]
 
-      # Front layer - fastest
-      - name: layer 1
+      # Back layer - slowest
+      - name: layer 3
         type: solid
-        color: 34495e
-        blendingMode: screen
+        color: 1a1a2e
         transform:
-          opacity: 20
           position:
             - time: 0
               value: [960, 540]
             - time: 10
-              value: [1160, 680]
+              value: [1000, 560]
 ```
 
 ## Gradient with shapes
@@ -211,9 +211,21 @@ compositions:
     height: 1080
     duration: 10
     layers:
-      - name: bg solid
-        type: solid
-        color: 1a1a2e
+      - name: accent shape
+        type: shape
+        blendingMode: screen
+        transform:
+          position:
+            - time: 0
+              value: [400, 800]
+            - time: 10
+              value: [1520, 280]
+        shapes:
+          - type: ellipse
+            size: [800, 800]
+            fill:
+              color: e74c3c
+              opacity: 20
 
       - name: gradient shape
         type: shape
@@ -234,19 +246,7 @@ compositions:
               color: 3498db
               opacity: 30
 
-      - name: accent shape
-        type: shape
-        blendingMode: screen
-        transform:
-          position:
-            - time: 0
-              value: [400, 800]
-            - time: 10
-              value: [1520, 280]
-        shapes:
-          - type: ellipse
-            size: [800, 800]
-            fill:
-              color: e74c3c
-              opacity: 20
+      - name: bg solid
+        type: solid
+        color: 1a1a2e
 ```

@@ -57,15 +57,19 @@ Layers are defined in a `layers` array:
 compositions:
   - name: Title Card
     layers:
-      - name: background
-        type: solid
-        color: 000000
       - name: title
         type: text
         text: Chapter One
+      - name: background
+        type: solid
+        color: 000000
 ```
 
 See [Layers](/reference/layers) for complete layer documentation.
+
+::: tip Layer stack order
+Layer order in YAML maps to the AE stack with the first layer on top. Put background layers later in the list so they render behind foreground layers.
+:::
 
 ## Composition nesting
 

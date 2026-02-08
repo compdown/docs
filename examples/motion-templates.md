@@ -64,25 +64,6 @@ compositions:
     height: 1080
     duration: 5
     layers:
-      - name: bar
-        type: solid
-        color: 3498db
-        width: 500
-        height: 80
-        transform:
-          position: [250, 920]
-          anchorPoint: [0, 40]
-          scale:
-            - time: 0
-              value: [0, 100]
-            - time: 0.5
-              value: [100, 100]
-              easing: easeOut
-            - time: 4.5
-              value: [100, 100]
-            - time: 5
-              value: [0, 100]
-
       - name: name
         type: text
         text: Person Name
@@ -118,6 +99,25 @@ compositions:
               value: 100
             - time: 4.6
               value: 0
+
+      - name: bar
+        type: solid
+        color: 3498db
+        width: 500
+        height: 80
+        transform:
+          position: [250, 920]
+          anchorPoint: [0, 40]
+          scale:
+            - time: 0
+              value: [0, 100]
+            - time: 0.5
+              value: [100, 100]
+              easing: easeOut
+            - time: 4.5
+              value: [100, 100]
+            - time: 5
+              value: [0, 100]
 
     essentialGraphics:
       - property: name.text

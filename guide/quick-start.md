@@ -10,22 +10,22 @@ Open the Compdown panel in After Effects and paste this YAML:
 compositions:
   - name: Hello World
     layers:
-      - name: background
-        type: solid
-        color: 1a1a2e
       - name: greeting
         type: text
         text: Hello World
         fontSize: 72
         transform:
           position: [960, 540]
+      - name: background
+        type: solid
+        color: 1a1a2e
 ```
 
 Click the **Create** button. Compdown will:
 
 1. Create a composition named "Hello World" (1920x1080, 30fps, 10s — the defaults)
-2. Add a dark solid layer called "background"
-3. Add a text layer with "Hello World" centered in the frame
+2. Add a text layer with "Hello World" centered in the frame
+3. Add a dark solid layer called "background" behind it
 
 That's it. You've created your first composition from YAML.
 

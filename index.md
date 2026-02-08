@@ -34,14 +34,14 @@ features:
 compositions:
   - name: My Comp
     layers:
-      - name: background
-        type: solid
-        color: 1a1a2e
       - name: title
         type: text
         text: Hello World
         transform:
           position: [960, 540]
+      - name: background
+        type: solid
+        color: 1a1a2e
 ```
 
 This creates a composition with a dark solid background and centered text. That's it — no scripting, no clicking through menus.

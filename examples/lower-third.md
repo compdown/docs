@@ -44,26 +44,6 @@ compositions:
     height: 1080
     duration: 5
     layers:
-      - name: bar
-        type: solid
-        color: e74c3c
-        width: 400
-        height: 80
-        transform:
-          position: [200, 920]
-          anchorPoint: [0, 40]
-          scale:
-            - time: 0
-              value: [0, 100]
-              easing: easeOut
-            - time: 0.5
-              value: [100, 100]
-            - time: 4.5
-              value: [100, 100]
-            - time: 5
-              value: [0, 100]
-              easing: easeIn
-
       - name: name
         type: text
         text: Jane Smith
@@ -99,6 +79,26 @@ compositions:
               value: 100
             - time: 4.6
               value: 0
+
+      - name: bar
+        type: solid
+        color: e74c3c
+        width: 400
+        height: 80
+        transform:
+          position: [200, 920]
+          anchorPoint: [0, 40]
+          scale:
+            - time: 0
+              value: [0, 100]
+              easing: easeOut
+            - time: 0.5
+              value: [100, 100]
+            - time: 4.5
+              value: [100, 100]
+            - time: 5
+              value: [0, 100]
+              easing: easeIn
 ```
 
 ## Two-line lower third with accent
@@ -112,6 +112,42 @@ compositions:
     height: 1080
     duration: 6
     layers:
+      - name: name
+        type: text
+        text: Jane Smith
+        fontSize: 32
+        fillColor: FFFFFF
+        justification: left
+        transform:
+          position: [120, 900]
+          opacity:
+            - time: 0.4
+              value: 0
+            - time: 0.7
+              value: 100
+            - time: 5.3
+              value: 100
+            - time: 5.6
+              value: 0
+
+      - name: title
+        type: text
+        text: Creative Director
+        fontSize: 22
+        fillColor: 3498db
+        justification: left
+        transform:
+          position: [120, 935]
+          opacity:
+            - time: 0.5
+              value: 0
+            - time: 0.8
+              value: 100
+            - time: 5.2
+              value: 100
+            - time: 5.5
+              value: 0
+
       - name: accent bar
         type: solid
         color: 3498db
@@ -151,42 +187,6 @@ compositions:
             - time: 5.9
               value: [0, 100]
               easing: easeIn
-
-      - name: name
-        type: text
-        text: Jane Smith
-        fontSize: 32
-        fillColor: FFFFFF
-        justification: left
-        transform:
-          position: [120, 900]
-          opacity:
-            - time: 0.4
-              value: 0
-            - time: 0.7
-              value: 100
-            - time: 5.3
-              value: 100
-            - time: 5.6
-              value: 0
-
-      - name: title
-        type: text
-        text: Creative Director
-        fontSize: 22
-        fillColor: 3498db
-        justification: left
-        transform:
-          position: [120, 935]
-          opacity:
-            - time: 0.5
-              value: 0
-            - time: 0.8
-              value: 100
-            - time: 5.2
-              value: 100
-            - time: 5.5
-              value: 0
 ```
 
 ## Using as a template
@@ -201,14 +201,6 @@ compositions:
     height: 200
     duration: 5
     layers:
-      - name: bar
-        type: solid
-        color: e74c3c
-        width: 400
-        height: 80
-        transform:
-          position: [200, 100]
-
       - name: name
         type: text
         text: Name Here
@@ -216,6 +208,14 @@ compositions:
         fillColor: FFFFFF
         transform:
           position: [220, 90]
+
+      - name: bar
+        type: solid
+        color: e74c3c
+        width: 400
+        height: 80
+        transform:
+          position: [200, 100]
 
   # Main composition
   - name: Main Video

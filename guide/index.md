@@ -12,12 +12,12 @@ compositions:
     width: 1920
     height: 200
     layers:
-      - name: bar
-        type: solid
-        color: 1a1a2e
       - name: label
         type: text
         text: Breaking News
+      - name: bar
+        type: solid
+        color: 1a1a2e
 ```
 
 Click a button, and Compdown creates the composition with all layers, properties, and animations in place.
