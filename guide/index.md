@@ -42,7 +42,7 @@ Text in, text out. AI tools can read, modify, and generate Compdown files just l
 - **Compositions**: Any resolution, frame rate, duration
 - **Layer types**: Solids, text, nulls, adjustments, shapes, cameras, lights
 - **File-based layers**: Images, video, sequences
-- **Nested comps**: Comp-in-comp via the `comp` key
+- **Nested comps**: Composition-in-composition via the `composition` key
 - **Animation**: Keyframes with easing on transform and effect properties
 - **Effects**: Any native AE effect with animated properties
 - **Essential Graphics**: Expose properties for Motion Graphics Templates

@@ -69,7 +69,7 @@ See [Layers](/reference/layers) for complete layer documentation.
 
 ## Composition nesting
 
-Reference other compositions using the `comp` key on a layer:
+Reference other compositions using the `composition` key on a layer:
 
 ```yaml
 compositions:
@@ -84,13 +84,14 @@ compositions:
   - name: Main Comp
     layers:
       - name: lower third
-        comp: Lower Third  # Nests the Lower Third comp
+        composition: Lower Third  # Nests the Lower Third composition
         transform:
           position: [960, 980]
 ```
 
-::: warning Order matters
-Referenced compositions must be defined earlier in the YAML. `Main Comp` can reference `Lower Third` because `Lower Third` is defined first.
+::: tip Reference behavior
+Compositions are created before layers, so forward references are allowed.
+Use unique composition names to avoid ambiguous references.
 :::
 
 ## Placing in folders

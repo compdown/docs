@@ -70,7 +70,7 @@ Each layer needs exactly one of:
 
 - `type:` — Built-in types: `solid`, `null`, `adjustment`, `text`, `camera`, `light`, `shape`
 - `file:` — Reference to an imported file
-- `comp:` — Reference to another composition
+- `composition:` — Reference to another composition
 
 ```yaml
 layers:
@@ -82,7 +82,7 @@ layers:
     file: bg  # References a file with id: bg
 
   - name: nested comp
-    comp: Lower Third  # References another comp by name
+    composition: Lower Third  # References another composition by name
 ```
 
 ## Adding animation

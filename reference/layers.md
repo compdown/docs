@@ -1,6 +1,6 @@
 # Layers
 
-Layers are the building blocks of compositions. Each layer must have exactly one source: `type`, `file`, or `comp`.
+Layers are the building blocks of compositions. Each layer must have exactly one source: `type`, `file`, or `composition`.
 
 ## Layer source
 
@@ -10,7 +10,7 @@ Every layer needs exactly one of:
 |----------|-------------|
 | `type`   | Built-in layer type |
 | `file`   | Reference to an imported file |
-| `comp`   | Reference to another composition |
+| `composition` | Reference to another composition |
 
 ```yaml
 layers:
@@ -23,9 +23,9 @@ layers:
   - name: footage
     file: my-video  # References a file id
 
-  # Comp-based layer
+  # Composition-based layer
   - name: nested
-    comp: Lower Third  # References a comp name
+    composition: Lower Third  # References a composition name
 ```
 
 ## Built-in layer types
@@ -257,7 +257,7 @@ compositions:
 
 ---
 
-## Comp layers (nesting)
+## Composition layers (nesting)
 
 Embed another composition as a layer.
 
@@ -272,7 +272,7 @@ compositions:
   - name: Main Comp
     layers:
       - name: lower third instance
-        comp: Lower Third
+        composition: Lower Third
         transform:
           position: [960, 980]
 ```

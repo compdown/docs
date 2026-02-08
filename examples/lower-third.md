@@ -222,14 +222,14 @@ compositions:
     duration: 60
     layers:
       - name: lower third 1
-        comp: LT Template
+        composition: LT Template
         inPoint: 5
         outPoint: 10
         transform:
           position: [960, 980]
 
       - name: lower third 2
-        comp: LT Template
+        composition: LT Template
         inPoint: 30
         outPoint: 35
         transform:

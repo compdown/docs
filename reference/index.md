@@ -26,7 +26,7 @@ When Compdown processes a document, it creates items in this order:
 This order matters because:
 - Files need folders to exist first
 - Compositions need folders to exist first
-- Layers can reference files (via `file:`) or other comps (via `comp:`)
+- Layers can reference files (via `file:`) or other compositions (via `composition:`)
 
 ## YAML parsing notes
 
