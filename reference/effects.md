@@ -115,7 +115,7 @@ effects:
     properties:
       Blurriness: 10
     expressions:
-      Blurriness: "wiggle(2, 5)"
+      Blurriness: wiggle(2, 5)
 ```
 
 ## Common effects reference

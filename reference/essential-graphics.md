@@ -16,7 +16,7 @@ compositions:
     layers:
       - name: title
         type: text
-        text: "Breaking News"
+        text: Breaking News
       - name: bar
         type: solid
         color: FF0000
@@ -46,9 +46,9 @@ Customize the display name and options:
 ```yaml
 essentialGraphics:
   - property: title.text
-    name: "Headline"
+    name: Headline
   - property: title.transform.position
-    name: "Title Position"
+    name: Title Position
 ```
 
 ## Schema
@@ -88,7 +88,7 @@ Format: `layerName.propertyPath`
 ```yaml
 essentialGraphics:
   - property: bar.effects.Gaussian Blur.Blurriness
-    name: "Blur Amount"
+    name: Blur Amount
 ```
 
 ## Round-trip support
@@ -112,8 +112,8 @@ For cleaner names in Premiere (at the cost of round-trip):
 ```yaml
 essentialGraphics:
   - property: title.text
-    name: "Headline"
-    encodePathInName: false  # Name will be just "Headline"
+    name: Headline
+    encodePathInName: false  # Name will be just Headline
 ```
 
 ## Complete example
@@ -127,7 +127,7 @@ compositions:
     layers:
       - name: title
         type: text
-        text: "Main Title"
+        text: Main Title
         fontSize: 72
         fillColor: FFFFFF
         transform:
@@ -135,7 +135,7 @@ compositions:
 
       - name: subtitle
         type: text
-        text: "Subtitle goes here"
+        text: Subtitle goes here
         fontSize: 36
         fillColor: CCCCCC
         transform:
@@ -151,13 +151,13 @@ compositions:
 
     essentialGraphics:
       - property: title.text
-        name: "Main Title"
+        name: Main Title
       - property: subtitle.text
-        name: "Subtitle"
+        name: Subtitle
       - property: title.transform.position
-        name: "Title Position"
+        name: Title Position
       - property: background.effects.Gaussian Blur.Blurriness
-        name: "Background Blur"
+        name: Background Blur
 ```
 
 ## Limitations

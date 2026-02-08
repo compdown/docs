@@ -21,13 +21,13 @@ compositions:
     duration: 60
     markers:
       - time: 0
-        comment: "Intro"
+        comment: Intro
       - time: 10
-        comment: "Section 1"
+        comment: Section 1
       - time: 30
-        comment: "Section 2"
+        comment: Section 2
       - time: 50
-        comment: "Outro"
+        comment: Outro
 ```
 
 ## Duration markers
@@ -37,7 +37,7 @@ Create range markers with `duration`:
 ```yaml
 markers:
   - time: 5
-    comment: "Main Content"
+    comment: Main Content
     duration: 20  # Marker spans from 5s to 25s
 ```
 
@@ -48,14 +48,14 @@ Mark chapters for video exports:
 ```yaml
 markers:
   - time: 0
-    comment: "Introduction"
-    chapter: "Intro"
+    comment: Introduction
+    chapter: Intro
   - time: 60
-    comment: "Main Topic"
-    chapter: "Main"
+    comment: Main Topic
+    chapter: Main
   - time: 180
-    comment: "Conclusion"
-    chapter: "End"
+    comment: Conclusion
+    chapter: End
 ```
 
 ## URLs
@@ -65,8 +65,8 @@ Attach links to markers:
 ```yaml
 markers:
   - time: 30
-    comment: "Learn more"
-    url: "https://example.com/more-info"
+    comment: Learn more
+    url: https://example.com/more-info
 ```
 
 ## Color labels
@@ -76,13 +76,13 @@ Set marker colors (0-16, matching AE's label colors):
 ```yaml
 markers:
   - time: 0
-    comment: "Start"
+    comment: Start
     label: 1   # Red
   - time: 10
-    comment: "Action"
+    comment: Action
     label: 9   # Green
   - time: 20
-    comment: "End"
+    comment: End
     label: 2   # Yellow
 ```
 
@@ -96,37 +96,37 @@ compositions:
     duration: 300
     markers:
       - time: 0
-        comment: "Title Card"
-        chapter: "Intro"
+        comment: Title Card
+        chapter: Intro
         label: 1
 
       - time: 5
-        comment: "Welcome"
+        comment: Welcome
         duration: 10
 
       - time: 20
-        comment: "Step 1: Setup"
-        chapter: "Setup"
+        comment: 'Step 1: Setup'
+        chapter: Setup
         label: 9
 
       - time: 60
-        comment: "Step 2: Configuration"
-        chapter: "Config"
+        comment: 'Step 2: Configuration'
+        chapter: Config
         label: 9
 
       - time: 120
-        comment: "Step 3: Usage"
-        chapter: "Usage"
+        comment: 'Step 3: Usage'
+        chapter: Usage
         label: 9
 
       - time: 240
-        comment: "Summary"
-        chapter: "Summary"
+        comment: Summary
+        chapter: Summary
         label: 2
 
       - time: 280
-        comment: "Subscribe link"
-        url: "https://youtube.com/@channel"
+        comment: Subscribe link
+        url: https://youtube.com/@channel
 
     layers:
       - name: content
@@ -141,11 +141,11 @@ Export to platforms that support chapters (YouTube, Vimeo):
 ```yaml
 markers:
   - time: 0
-    chapter: "Introduction"
+    chapter: Introduction
   - time: 60
-    chapter: "Main Content"
+    chapter: Main Content
   - time: 180
-    chapter: "Conclusion"
+    chapter: Conclusion
 ```
 
 ### Script sync points
@@ -153,11 +153,11 @@ Mark timing for synchronized elements:
 ```yaml
 markers:
   - time: 2.5
-    comment: "Logo appears"
+    comment: Logo appears
   - time: 5
-    comment: "Title animates in"
+    comment: Title animates in
   - time: 8
-    comment: "Transition"
+    comment: Transition
 ```
 
 ### Render regions
@@ -165,9 +165,9 @@ Define sections for rendering:
 ```yaml
 markers:
   - time: 0
-    comment: "Scene 1"
+    comment: Scene 1
     duration: 30
   - time: 30
-    comment: "Scene 2"
+    comment: Scene 2
     duration: 30
 ```

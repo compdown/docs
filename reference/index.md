@@ -44,6 +44,16 @@ color: 000000  # Works as-is (normally YAML parses this as number)
 
 You don't need extra quotes around these values.
 
+### Forcing string type
+Use quotes when a value should stay a string even if it looks like another YAML type:
+
+```yaml
+text: "123"     # not a number
+id: "001"       # preserves leading zeros
+text: "true"    # not a boolean
+text: "null"    # not a null value
+```
+
 ## Schema sections
 
 - [Folders](/reference/folders) — Project folder structure

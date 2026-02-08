@@ -15,7 +15,7 @@ compositions:
     layers:
       - name: name
         type: text
-        text: "Jane Smith"
+        text: Jane Smith
         fontSize: 48
         font: Arial
         fillColor: FFFFFF
@@ -25,7 +25,7 @@ compositions:
 
       - name: title
         type: text
-        text: "Senior Producer"
+        text: Senior Producer
         fontSize: 32
         fillColor: CCCCCC
         justification: left
@@ -66,7 +66,7 @@ compositions:
 
       - name: name
         type: text
-        text: "Jane Smith"
+        text: Jane Smith
         fontSize: 36
         fillColor: FFFFFF
         justification: left
@@ -84,7 +84,7 @@ compositions:
 
       - name: title
         type: text
-        text: "Senior Producer"
+        text: Senior Producer
         fontSize: 24
         fillColor: EEEEEE
         justification: left
@@ -154,7 +154,7 @@ compositions:
 
       - name: name
         type: text
-        text: "Jane Smith"
+        text: Jane Smith
         fontSize: 32
         fillColor: FFFFFF
         justification: left
@@ -172,7 +172,7 @@ compositions:
 
       - name: title
         type: text
-        text: "Creative Director"
+        text: Creative Director
         fontSize: 22
         fillColor: 3498db
         justification: left
@@ -211,7 +211,7 @@ compositions:
 
       - name: name
         type: text
-        text: "Name Here"
+        text: Name Here
         fontSize: 36
         fillColor: FFFFFF
         transform:

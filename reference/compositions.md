@@ -121,11 +121,11 @@ compositions:
   - name: Main Comp
     markers:
       - time: 0
-        comment: "Intro"
+        comment: Intro
       - time: 5
-        comment: "Main Content"
+        comment: Main Content
       - time: 10
-        comment: "Outro"
+        comment: Outro
 ```
 
 See [Markers](/reference/markers) for full marker documentation.
@@ -140,7 +140,7 @@ compositions:
     layers:
       - name: title
         type: text
-        text: "Edit Me"
+        text: Edit Me
     essentialGraphics:
       - title.text
       - title.transform.position

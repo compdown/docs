@@ -24,7 +24,7 @@ compositions:
     layers:
       - name: title
         type: text
-        text: "Your Title Here"
+        text: Your Title Here
         fontSize: 72
         fillColor: FFFFFF
         justification: center
@@ -33,7 +33,7 @@ compositions:
 
       - name: subtitle
         type: text
-        text: "Subtitle text"
+        text: Subtitle text
         fontSize: 36
         fillColor: CCCCCC
         justification: center
@@ -46,11 +46,11 @@ compositions:
 
     essentialGraphics:
       - property: title.text
-        name: "Main Title"
+        name: Main Title
       - property: subtitle.text
-        name: "Subtitle"
+        name: Subtitle
       - property: title.transform.position
-        name: "Title Position"
+        name: Title Position
 ```
 
 ## Lower third template
@@ -85,7 +85,7 @@ compositions:
 
       - name: name
         type: text
-        text: "Person Name"
+        text: Person Name
         fontSize: 36
         fillColor: FFFFFF
         justification: left
@@ -103,7 +103,7 @@ compositions:
 
       - name: title
         type: text
-        text: "Job Title"
+        text: Job Title
         fontSize: 24
         fillColor: EEEEEE
         justification: left
@@ -121,11 +121,11 @@ compositions:
 
     essentialGraphics:
       - property: name.text
-        name: "Name"
+        name: Name
       - property: title.text
-        name: "Title"
+        name: Title
       - property: bar.transform.scale
-        name: "Bar Width"
+        name: Bar Width
 ```
 
 ## Template with effects
@@ -141,7 +141,7 @@ compositions:
     layers:
       - name: title
         type: text
-        text: "TITLE"
+        text: TITLE
         fontSize: 120
         fillColor: FFFFFF
         justification: center
@@ -157,7 +157,7 @@ compositions:
 
       - name: background
         type: solid
-        color: "000000"
+        color: 000000
         effects:
           - name: Gaussian Blur
             matchName: ADBE Gaussian Blur 2
@@ -166,11 +166,11 @@ compositions:
 
     essentialGraphics:
       - property: title.text
-        name: "Title Text"
+        name: Title Text
       - property: title.effects.Glow.Glow Radius
-        name: "Glow Amount"
+        name: Glow Amount
       - property: background.effects.Gaussian Blur.Blurriness
-        name: "Background Blur"
+        name: Background Blur
 ```
 
 ## Call-to-action template
@@ -186,7 +186,7 @@ compositions:
     layers:
       - name: heading
         type: text
-        text: "SUBSCRIBE"
+        text: SUBSCRIBE
         fontSize: 80
         fillColor: FFFFFF
         justification: center
@@ -204,7 +204,7 @@ compositions:
 
       - name: cta text
         type: text
-        text: "Click the bell for notifications"
+        text: Click the bell for notifications
         fontSize: 32
         fillColor: CCCCCC
         justification: center
@@ -224,7 +224,7 @@ compositions:
 
       - name: button text
         type: text
-        text: "SUBSCRIBE"
+        text: SUBSCRIBE
         fontSize: 24
         fillColor: FFFFFF
         justification: center
@@ -237,15 +237,15 @@ compositions:
 
     essentialGraphics:
       - property: heading.text
-        name: "Heading"
+        name: Heading
       - property: channel name.text
-        name: "Channel Name"
+        name: Channel Name
       - property: cta text.text
-        name: "Call to Action"
+        name: Call to Action
       - property: button text.text
-        name: "Button Text"
+        name: Button Text
       - property: heading.transform.position
-        name: "Heading Position"
+        name: Heading Position
 ```
 
 ## Tips for templates
@@ -255,7 +255,7 @@ Expose only the properties editors actually need to change:
 ```yaml
 essentialGraphics:
   - property: title.text
-    name: "Title"
+    name: Title
   # Don't expose every single property
 ```
 
@@ -264,8 +264,8 @@ Make property names obvious:
 ```yaml
 essentialGraphics:
   - property: name.text
-    name: "Person's Name"  # Clear
-  # Not: name: "text_01"   # Confusing
+    name: Person's Name  # Clear
+  # Not: name: text_01   # Confusing
 ```
 
 ### Group related properties
@@ -274,15 +274,15 @@ Order properties logically:
 essentialGraphics:
   # Text content first
   - property: title.text
-    name: "Main Title"
+    name: Main Title
   - property: subtitle.text
-    name: "Subtitle"
+    name: Subtitle
   # Then positioning
   - property: title.transform.position
-    name: "Title Position"
+    name: Title Position
   # Then styling
   - property: background.effects.Gaussian Blur.Blurriness
-    name: "Background Blur"
+    name: Background Blur
 ```
 
 ### Test round-trip

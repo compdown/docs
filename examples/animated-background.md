@@ -114,8 +114,8 @@ compositions:
           scale: [130, 130]
           rotation: 0
           expressions:
-            position: "wiggle(0.5, 100)"
-            rotation: "wiggle(0.3, 5)"
+            position: wiggle(0.5, 100)
+            rotation: wiggle(0.3, 5)
 ```
 
 ## Blurred background

@@ -27,7 +27,7 @@ layers:
   fill:
     color: FF5500
   stroke:
-    color: "000000"
+    color: 000000
     width: 2
 ```
 
@@ -137,7 +137,7 @@ fill:
 
 ```yaml
 stroke:
-  color: "000000"
+  color: 000000
   width: 3
   opacity: 100
 ```

@@ -15,7 +15,7 @@ compositions:
     layers:
       - name: title
         type: text
-        text: "Welcome"
+        text: Welcome
         fontSize: 120
         fillColor: FFFFFF
         justification: center
@@ -42,7 +42,7 @@ compositions:
     layers:
       - name: title
         type: text
-        text: "Hello"
+        text: Hello
         fontSize: 100
         fillColor: FFFFFF
         justification: center
@@ -78,7 +78,7 @@ compositions:
     layers:
       - name: title
         type: text
-        text: "Slide In"
+        text: Slide In
         fontSize: 80
         fillColor: FFFFFF
         justification: left
@@ -109,7 +109,7 @@ compositions:
     layers:
       - name: line1
         type: text
-        text: "First Line"
+        text: First Line
         fontSize: 60
         fillColor: FFFFFF
         justification: center
@@ -124,7 +124,7 @@ compositions:
 
       - name: line2
         type: text
-        text: "Second Line"
+        text: Second Line
         fontSize: 60
         fillColor: CCCCCC
         justification: center
@@ -139,7 +139,7 @@ compositions:
 
       - name: line3
         type: text
-        text: "Third Line"
+        text: Third Line
         fontSize: 60
         fillColor: 999999
         justification: center
@@ -166,10 +166,10 @@ compositions:
     layers:
       - name: title
         type: text
-        text: "Bold Title"
+        text: Bold Title
         fontSize: 100
         fillColor: FFFFFF
-        strokeColor: "000000"
+        strokeColor: 000000
         strokeWidth: 2
         justification: center
         transform:
@@ -196,7 +196,7 @@ compositions:
     layers:
       - name: word1
         type: text
-        text: "MOVE"
+        text: MOVE
         fontSize: 120
         fillColor: e74c3c
         justification: center
@@ -216,7 +216,7 @@ compositions:
 
       - name: word2
         type: text
-        text: "IT"
+        text: IT
         fontSize: 120
         fillColor: 3498db
         justification: center
@@ -230,7 +230,7 @@ compositions:
 
       - name: word3
         type: text
-        text: "NOW"
+        text: NOW
         fontSize: 120
         fillColor: 2ecc71
         justification: center
@@ -262,7 +262,7 @@ compositions:
     layers:
       - name: title
         type: text
-        text: "Shake It"
+        text: Shake It
         fontSize: 80
         fillColor: FFFFFF
         justification: center
@@ -270,8 +270,8 @@ compositions:
           position: [960, 540]
           rotation: 0
           expressions:
-            position: "wiggle(3, 20)"
-            rotation: "wiggle(5, 3)"
+            position: wiggle(3, 20)
+            rotation: wiggle(5, 3)
 ```
 
 ## Complete title sequence
@@ -316,7 +316,7 @@ compositions:
 
       - name: main title
         type: text
-        text: "THE MAIN TITLE"
+        text: THE MAIN TITLE
         fontSize: 80
         fillColor: FFFFFF
         tracking: 200
@@ -331,7 +331,7 @@ compositions:
 
       - name: subtitle
         type: text
-        text: "A Short Film"
+        text: A Short Film
         fontSize: 24
         fillColor: 999999
         tracking: 400

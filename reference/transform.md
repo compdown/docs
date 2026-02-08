@@ -139,8 +139,8 @@ transform:
   position: [960, 540]
   rotation: 0
   expressions:
-    position: "wiggle(5, 50)"
-    rotation: "time * 36"
+    position: wiggle(5, 50)
+    rotation: time * 36
 ```
 
 ### Expression properties
@@ -152,9 +152,9 @@ transform:
   position: [960, 540]
   scale: [100, 100]
   expressions:
-    position: "wiggle(2, 100)"
+    position: wiggle(2, 100)
     scale: "[value[0] + Math.sin(time*5)*10, value[1]]"
-    opacity: "Math.abs(Math.sin(time * Math.PI)) * 100"
+    opacity: Math.abs(Math.sin(time * Math.PI)) * 100
 ```
 
 ## Complete example
