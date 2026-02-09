@@ -1,6 +1,6 @@
 # Shape Layers
 
-Shape layers contain parametric shapes with fill and stroke styling.
+Shape layers contain parametric shapes and custom paths with fill and stroke styling.
 
 ## Basic usage
 
@@ -69,15 +69,40 @@ layers:
     color: FFFF00
 ```
 
+### Path
+
+```yaml
+- type: path
+  vertices:
+    - [0, 0]
+    - [220, 0]
+    - [220, 120]
+    - [0, 120]
+  inTangents:
+    - [0, 0]
+    - [0, 0]
+    - [0, 0]
+    - [0, 0]
+  outTangents:
+    - [0, 0]
+    - [0, 0]
+    - [0, 0]
+    - [0, 0]
+  closed: true
+  position: [100, 40]   # Applied via shape-group transform
+  fill:
+    color: 8e44ad
+```
+
 ## Shape properties reference
 
 ### All shapes
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| type | string | yes | `rectangle`, `ellipse`, `polygon`, `star` |
+| type | string | yes | `rectangle`, `ellipse`, `polygon`, `star`, `path` |
 | name | string | no | Shape group name |
-| position | `[x, y]` | no | Center position |
+| position | `[x, y]` or keyframes | no | Center/group position |
 | fill | object | no | Fill styling |
 | stroke | object | no | Stroke styling |
 
@@ -85,41 +110,50 @@ layers:
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| size | `[w, h]` | yes | Width and height |
-| roundness | number | no | Corner radius |
+| size | `[w, h]` or keyframes | yes | Width and height |
+| roundness | number or keyframes | no | Corner radius |
 
 ### Ellipse
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| size | `[w, h]` | yes | Width and height |
+| size | `[w, h]` or keyframes | yes | Width and height |
 
 ### Polygon
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| points | int | yes | Number of sides (min 3) |
-| outerRadius | number | yes | Radius |
-| outerRoundness | number | no | Corner rounding |
-| rotation | number | no | Shape rotation |
+| points | int or keyframes | yes | Number of sides (min 3) |
+| outerRadius | number or keyframes | yes | Radius |
+| outerRoundness | number or keyframes | no | Corner rounding |
+| rotation | number or keyframes | no | Shape rotation |
 
 ### Star
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| points | int | yes | Number of points (min 3) |
-| outerRadius | number | yes | Outer point radius |
-| innerRadius | number | yes | Inner point radius |
-| outerRoundness | number | no | Outer corner rounding |
-| innerRoundness | number | no | Inner corner rounding |
-| rotation | number | no | Shape rotation |
+| points | int or keyframes | yes | Number of points (min 3) |
+| outerRadius | number or keyframes | yes | Outer point radius |
+| innerRadius | number or keyframes | yes | Inner point radius |
+| outerRoundness | number or keyframes | no | Outer corner rounding |
+| innerRoundness | number or keyframes | no | Inner corner rounding |
+| rotation | number or keyframes | no | Shape rotation |
+
+### Path
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| vertices | `[[x, y], ...]` | yes | Path points |
+| inTangents | `[[x, y], ...]` | no | Incoming Bezier handles (length must match `vertices`) |
+| outTangents | `[[x, y], ...]` | no | Outgoing Bezier handles (length must match `vertices`) |
+| closed | boolean | no | Defaults to `true` |
 
 ## Fill
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| color | string | yes | 6-char hex color |
-| opacity | number | no | Opacity 0-100 (default: 100) |
+| color | string or keyframes | yes | 6-char hex color |
+| opacity | number or keyframes | no | Opacity 0-100 (default: 100) |
 
 ```yaml
 fill:
@@ -131,15 +165,35 @@ fill:
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| color | string | yes | 6-char hex color |
-| width | number | no | Stroke width (default: 1) |
-| opacity | number | no | Opacity 0-100 (default: 100) |
+| color | string or keyframes | yes | 6-char hex color |
+| width | number or keyframes | no | Stroke width (default: 1) |
+| opacity | number or keyframes | no | Opacity 0-100 (default: 100) |
 
 ```yaml
 stroke:
   color: 000000
   width: 3
   opacity: 100
+```
+
+## Keyframe format
+
+Use keyframe arrays on any shape property that supports animation:
+
+```yaml
+shapes:
+  - type: rectangle
+    size:
+      - time: 0
+        value: [220, 80]
+      - time: 2
+        value: [520, 80]
+        easing: easeOut
+    roundness:
+      - time: 0
+        value: 0
+      - time: 2
+        value: 40
 ```
 
 ## Multiple shapes
@@ -167,20 +221,6 @@ layers:
         position: [-100, 0]
         fill:
           color: e74c3c
-
-      - type: ellipse
-        name: Circle 2
-        size: [50, 50]
-        position: [0, 0]
-        fill:
-          color: f39c12
-
-      - type: ellipse
-        name: Circle 3
-        size: [50, 50]
-        position: [100, 0]
-        fill:
-          color: 2ecc71
 ```
 
 ## Complete example
@@ -206,11 +246,13 @@ compositions:
               color: e0e0e0
               width: 1
 
-          - type: star
-            name: Badge
-            points: 5
-            outerRadius: 30
-            innerRadius: 12
+          - type: path
+            name: Badge Cutout
+            vertices:
+              - [0, 0]
+              - [80, 0]
+              - [80, 40]
+              - [0, 40]
             position: [120, -70]
             fill:
               color: f1c40f
@@ -223,6 +265,88 @@ compositions:
               color: 3498db
 ```
 
-::: warning Limitations
-Shape layers currently support parametric shapes only. Bezier paths and masks are not yet supported.
+## Shape operators
+
+Operators are applied per shape group via `operators` (in listed order):
+
+```yaml
+shapes:
+  - type: rectangle
+    size: [600, 80]
+    fill:
+      color: 3498db
+    operators:
+      - type: trimPaths
+        start: 0
+        end: 100
+      - type: zigZag
+        size: 6
+        ridgesPerSegment: 14
+        points: smooth
+```
+
+### Supported operators
+
+| Operator type | Properties |
+|---------------|------------|
+| `trimPaths` | `start`, `end`, `offset`, `trimMultipleShapes` (`simultaneously`, `individually`) |
+| `zigZag` | `size`, `ridgesPerSegment`, `points` (`corner`, `smooth`) |
+| `repeater` | `copies`, `offset`, `transform.anchorPoint`, `transform.position`, `transform.scale`, `transform.rotation`, `transform.startOpacity`, `transform.endOpacity` |
+| `offsetPaths` | `amount`, `lineJoin` (`miter`, `round`, `bevel`), `miterLimit` |
+| `puckerBloat` | `amount` |
+| `roundCorners` | `radius` |
+| `mergePaths` | `mode` (`merge`, `add`, `subtract`, `intersect`, `excludeIntersections`) |
+| `twist` | `angle`, `center` |
+| `wigglePaths` | `size`, `detail`, `points` (`corner`, `smooth`), `wigglesPerSecond`, `correlation`, `temporalPhase`, `spatialPhase`, `randomSeed` |
+
+### Operator example set
+
+```yaml
+shapes:
+  - type: path
+    vertices:
+      - [0, 0]
+      - [200, 0]
+      - [200, 60]
+      - [0, 60]
+    fill:
+      color: f39c12
+    operators:
+      - type: trimPaths
+        end:
+          - time: 0
+            value: 0
+          - time: 2
+            value: 100
+      - type: offsetPaths
+        amount: 10
+      - type: roundCorners
+        radius: 12
+```
+
+::: warning Gradient fill limitation
+Shape-group gradient fills are not currently scriptable with full color-stop control in After Effects ExtendScript.
+`fill.gradient` is not part of the schema. For gradient looks, use layer styles/effects on the layer.
 :::
+
+## Gradient workaround
+
+```yaml
+layers:
+  - name: Gradient Card
+    type: shape
+    shapes:
+      - type: rectangle
+        size: [600, 120]
+        roundness: 16
+        fill:
+          color: FFFFFF
+    effects:
+      - name: Gradient Ramp
+        matchName: ADBE Ramp
+        properties:
+          Start of Ramp: [0, 0]
+          End of Ramp: [600, 0]
+          Start Color: [0.16, 0.50, 0.73]
+          End Color: [0.52, 0.76, 0.91]
+```

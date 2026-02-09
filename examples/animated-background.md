@@ -200,9 +200,9 @@ compositions:
               value: [1000, 560]
 ```
 
-## Gradient with shapes
+## Soft gradient look with shapes
 
-Using shape layers for gradient effects:
+Using semi-transparent shape fills and blend modes to create a gradient-like look:
 
 ```yaml
 compositions:
