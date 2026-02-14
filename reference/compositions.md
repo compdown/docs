@@ -68,7 +68,7 @@ compositions:
 See [Layers](/reference/layers) for complete layer documentation.
 
 ::: tip Layer stack order
-Layer order in YAML maps to the AE stack with the first layer on top. Put background layers later in the list so they render behind foreground layers.
+Layer order in Compdown syntax maps to the AE stack with the first layer on top. Put background layers later in the list so they render behind foreground layers.
 :::
 
 ## Composition nesting

@@ -1,10 +1,10 @@
 # Introduction
 
-Compdown is an After Effects extension that lets you describe compositions, layers, and animations in YAML — then create them with a single click.
+Compdown is an After Effects extension that lets you describe compositions, layers, and animations in text — then create them with a single click.
 
 ## What is Compdown?
 
-Instead of clicking through menus or writing ExtendScript, you write human-readable YAML:
+Instead of clicking through menus or writing ExtendScript, you write readable Compdown syntax:
 
 ```yaml
 compositions:
@@ -25,13 +25,13 @@ Click a button, and Compdown creates the composition with all layers, properties
 ## Why text-based workflows?
 
 ### Readable
-YAML is designed for humans. You can read a Compdown file and understand what it creates without running it.
+Compdown syntax is designed to be human-friendly. You can read a file and understand what it creates without running it.
 
 ### Shareable
 A Compdown file is just text. Email it, paste it in Slack, commit it to git, or share it in a gist. No binary files, no version compatibility issues.
 
 ### Fast
-Building variations? Copy the YAML, change a few values, paste it back. No need to duplicate comps or dig through the project panel.
+Building variations? Copy the text, change a few values, paste it back. No need to duplicate comps or dig through the project panel.
 
 ### AI-friendly
 Text in, text out. AI tools can read, modify, and generate Compdown files just like any other code. This opens up workflows where AI helps draft scenes, explore variations, or build first passes.
@@ -49,7 +49,7 @@ Text in, text out. AI tools can read, modify, and generate Compdown files just l
 
 ## Two-way workflow
 
-Compdown isn't just for creation. You can also **export existing compositions** back to YAML. This enables:
+Compdown isn't just for creation. You can also **export existing compositions** back to text syntax. This enables:
 
 - Documenting what a comp contains
 - Version controlling motion design

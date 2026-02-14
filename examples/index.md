@@ -1,6 +1,6 @@
 # Examples
 
-Ready-to-use YAML recipes for common motion graphics patterns.
+Ready-to-use syntax recipes for common motion graphics patterns.
 
 ## Available examples
 
@@ -18,7 +18,7 @@ Creating .mogrt-ready templates with Essential Graphics.
 
 ## How to use
 
-1. Copy the YAML from any example
+1. Copy the example text from any recipe
 2. Paste it into the Compdown panel
 3. Click **Create**
 4. Modify as needed

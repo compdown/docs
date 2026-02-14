@@ -50,7 +50,7 @@ This starts a dev server at `localhost:3000`. Changes to the panel code will hot
 
 1. Open After Effects
 2. Go to **Window > Extensions > Compdown**
-3. You should see the Compdown panel with a YAML editor
+3. You should see the Compdown panel with a text editor
 
 If the panel doesn't appear, check:
 - Debug mode is enabled (for local builds)

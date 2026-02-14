@@ -40,7 +40,7 @@ effects:
 The `matchName` is AE's internal identifier that stays consistent regardless of UI language.
 
 ::: tip Finding matchNames
-You can find effect matchNames in the [After Effects Scripting Guide](https://ae-scripting.docsforadobe.dev/) or by examining exported YAML from Compdown.
+You can find effect matchNames in the [After Effects Scripting Guide](https://ae-scripting.docsforadobe.dev/) or by examining exported Compdown text.
 :::
 
 ## Property value types

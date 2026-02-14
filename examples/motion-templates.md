@@ -9,7 +9,7 @@ Motion Graphics Templates are After Effects compositions with exposed properties
 Compdown lets you:
 1. Define compositions with editable properties
 2. Expose those properties via Essential Graphics
-3. Export back to YAML preserving the property mappings
+3. Export back to Compdown text preserving the property mappings
 
 ## Basic template
 
@@ -286,9 +286,9 @@ essentialGraphics:
 ```
 
 ### Test round-trip
-1. Create the template from YAML
+1. Create the template from Compdown text
 2. Modify values in AE
-3. Export back to YAML
+3. Export back to text
 4. Verify the properties are preserved
 
 ## Exporting as .mogrt

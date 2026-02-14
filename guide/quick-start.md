@@ -1,10 +1,10 @@
 # Quick Start
 
-Let's create your first composition with Compdown. By the end of this guide, you'll understand the basic YAML structure and how to build animated layers.
+Let's create your first composition with Compdown. By the end of this guide, you'll understand the basic structure and how to build animated layers.
 
 ## Your first composition
 
-Open the Compdown panel in After Effects and paste this YAML:
+Open the Compdown panel in After Effects and paste this:
 
 ```yaml
 compositions:
@@ -27,7 +27,7 @@ Click the **Create** button. Compdown will:
 2. Add a text layer with "Hello World" centered in the frame
 3. Add a dark solid layer called "background" behind it
 
-That's it. You've created your first composition from YAML.
+That's it. You've created your first composition from text syntax.
 
 ## Understanding the structure
 
@@ -153,7 +153,7 @@ Compdown works both ways. To export an existing composition:
 
 1. Select a composition in After Effects
 2. Click the **Export** button in Compdown
-3. The YAML representation appears in the editor
+3. The composition appears as text syntax in the editor
 
 This is useful for:
 - Understanding what properties a comp has
@@ -164,5 +164,5 @@ This is useful for:
 
 You now know the basics. Explore further:
 
-- [Reference](/reference/) — Complete YAML schema documentation
+- [Reference](/reference/) — Complete syntax documentation
 - [Examples](/examples/) — Real-world recipes and patterns

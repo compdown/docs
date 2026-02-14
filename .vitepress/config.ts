@@ -25,7 +25,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'YAML Reference',
+        text: 'Syntax',
         items: [
           { text: 'Overview', link: '/reference/' },
           { text: 'Folders', link: '/reference/folders' },

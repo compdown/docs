@@ -99,11 +99,11 @@ By default, Compdown encodes the property path in the controller name:
 Display Name [path:layer.transform.position]
 ```
 
-This allows exported YAML to include the full property path, enabling workflows like:
+This allows exported text to include the full property path, enabling workflows like:
 
-1. Create comp from YAML with Essential Graphics
+1. Create comp from Compdown text with Essential Graphics
 2. Modify in Premiere
-3. Export back to YAML with paths preserved
+3. Export back to text with paths preserved
 
 ### Disabling path encoding
 

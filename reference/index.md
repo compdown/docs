@@ -1,6 +1,7 @@
-# YAML Reference
+# Syntax Reference
 
-This section documents the complete Compdown YAML schema — every property, type, and option available.
+This section documents the complete Compdown syntax — every property, type, and option available.
+Compdown syntax is YAML-based, but you can think of it as plain text instructions for After Effects.
 
 ## Document structure
 
@@ -29,7 +30,7 @@ This order matters because:
 - Compositions need folders to exist first
 - Layers can reference files (via `file:`) or other compositions (via `composition:`)
 
-## YAML parsing notes
+## Parsing notes
 
 Compdown handles some YAML edge cases automatically:
 
@@ -46,7 +47,7 @@ color: 000000  # Works as-is (normally YAML parses this as number)
 You don't need extra quotes around these values.
 
 ### Forcing string type
-Use quotes when a value should stay a string even if it looks like another YAML type:
+Use quotes when a value should stay a string even if it looks like another data type:
 
 ```yaml
 text: "123"     # not a number

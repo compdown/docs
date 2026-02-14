@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Compdown
   text: A natural language for After Effects
-  tagline: Describe compositions in YAML, create them with a click
+  tagline: Describe compositions in plain text, create them with a click
   actions:
     - theme: brand
       text: Get Started
