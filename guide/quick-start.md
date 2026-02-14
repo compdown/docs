@@ -31,15 +31,33 @@ That's it. You've created your first composition from YAML.
 
 ## Understanding the structure
 
-A Compdown document has three optional top-level keys:
+A Compdown document has four optional top-level keys:
 
 ```yaml
+_timeline:  # Layers added to the active comp timeline (optional)
 folders:    # Project folders (optional)
 files:      # Imported footage (optional)
 compositions:  # Compositions with layers
 ```
 
-At least one must be present. For most workflows, you'll just use `compositions`.
+At least one must be present. For most workflows, you'll use either `compositions` or `_timeline`.
+
+### Add layers to the active timeline
+
+When you want to add layers to the currently active composition without creating a new comp:
+
+```yaml
+_timeline:
+  layers:
+    - name: greeting
+      type: text
+      text: Hello World
+      transform:
+        position: [960, 540]
+    - name: background
+      type: solid
+      color: 1a1a2e
+```
 
 ### Composition properties
 

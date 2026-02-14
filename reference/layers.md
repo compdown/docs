@@ -2,6 +2,16 @@
 
 Layers are the building blocks of compositions. Each layer must have exactly one source: `type`, `file`, or `composition`.
 
+Top-level layer authoring is done via `_timeline.layers`:
+
+```yaml
+_timeline:
+  layers:
+    - name: title
+      type: text
+      text: Hello World
+```
+
 ## Layer source
 
 Every layer needs exactly one of:

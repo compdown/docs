@@ -4,9 +4,10 @@ This section documents the complete Compdown YAML schema — every property, typ
 
 ## Document structure
 
-A Compdown document has three optional top-level keys:
+A Compdown document has four optional top-level keys:
 
 ```yaml
+_timeline:     # Add layers to the currently active composition timeline
 folders:       # Project folder structure
 files:         # Imported footage and assets
 compositions:  # Compositions with layers
