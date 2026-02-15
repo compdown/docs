@@ -59,6 +59,22 @@ _timeline:
       color: 1a1a2e
 ```
 
+### Update or remove existing layers
+
+Use explicit action words when you want to modify or delete:
+
+```yaml
+_timeline:
+  set:
+    layers:
+      - name: greeting
+        transform:
+          position: [960, 500]
+  remove:
+    layers:
+      - name: background
+```
+
 ### Composition properties
 
 Compositions have sensible defaults:

@@ -8,13 +8,26 @@ Compdown syntax is YAML-based, but you can think of it as plain text instruction
 A Compdown document has four optional top-level keys:
 
 ```yaml
-_timeline:     # Add layers to the currently active composition timeline
+_timeline:     # Add, update, or remove layers in the active composition timeline
 folders:       # Project folder structure
 files:         # Imported footage and assets
 compositions:  # Compositions with layers
 ```
 
 At least one must be present.
+
+## Timeline actions
+
+`_timeline` supports three layer actions:
+
+```yaml
+_timeline:
+  layers:       # add/create (implicit)
+  set:          # update existing
+  remove:       # delete existing
+```
+
+`set` and `remove` match layers by exact `name`.
 
 ## Creation order
 

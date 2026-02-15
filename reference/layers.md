@@ -2,7 +2,7 @@
 
 Layers are the building blocks of compositions. Each layer must have exactly one source: `type`, `file`, or `composition`.
 
-Top-level layer authoring is done via `_timeline.layers`:
+Top-level layer authoring is done via `_timeline`:
 
 ```yaml
 _timeline:
@@ -11,6 +11,25 @@ _timeline:
       type: text
       text: Hello World
 ```
+
+You can also update or remove existing layers:
+
+```yaml
+_timeline:
+  set:
+    layers:
+      - name: title
+        transform:
+          position: [960, 500]
+  remove:
+    layers:
+      - name: temp guide
+```
+
+Rules for `set/remove`:
+- Layers are matched by exact `name`.
+- If no layer matches, Compdown errors.
+- If multiple layers match the same name, Compdown errors.
 
 ## Layer source
 
