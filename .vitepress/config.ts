@@ -28,7 +28,7 @@ export default defineConfig({
         text: 'Syntax',
         items: [
           {
-            text: 'Create (Core)',
+            text: 'Composer',
             items: [
               { text: 'Overview', link: '/reference/' },
               { text: 'Folders', link: '/reference/folders' },
@@ -43,7 +43,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Target & Edit (Advanced)',
+            text: 'Operate',
             items: [
               { text: 'Targets', link: '/reference/targets' },
               { text: 'Actions', link: '/reference/actions' },
