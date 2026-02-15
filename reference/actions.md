@@ -1,6 +1,8 @@
 # Actions
 
-Actions define what Compdown should do inside a context block like `_timeline`.
+Actions define what Compdown should do inside a target block like `_timeline`.
+
+For target basics, read [Targets](/reference/targets) first.
 
 ## Overview
 
@@ -12,6 +14,10 @@ _timeline:
   set:      # update existing
   remove:   # delete existing
 ```
+
+Default rule:
+- No action verb means **create/add**.
+- Action verbs are used only when you want to **modify** existing content.
 
 ## 1) Add layers (implicit create)
 
@@ -29,7 +35,7 @@ _timeline:
 ```
 
 Notes:
-- This is the default action style (no verb needed).
+- This is the default behavior (no verb needed for create/add).
 - Requires an active composition timeline in After Effects.
 
 ## 2) Update layers (`set`)

@@ -28,7 +28,7 @@ export default defineConfig({
         text: 'Syntax',
         items: [
           { text: 'Overview', link: '/reference/' },
-          { text: 'Actions', link: '/reference/actions' },
+          { text: 'Targets', link: '/reference/targets' },
           { text: 'Folders', link: '/reference/folders' },
           { text: 'Files', link: '/reference/files' },
           { text: 'Compositions', link: '/reference/compositions' },
@@ -38,6 +38,7 @@ export default defineConfig({
           { text: 'Shapes', link: '/reference/shapes' },
           { text: 'Essential Graphics', link: '/reference/essential-graphics' },
           { text: 'Markers', link: '/reference/markers' },
+          { text: 'Actions', link: '/reference/actions' },
         ]
       },
       {

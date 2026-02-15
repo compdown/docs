@@ -16,18 +16,11 @@ compositions:  # Compositions with layers
 
 At least one must be present.
 
-## Timeline actions
+## Targets first, then actions
 
-`_timeline` supports three layer actions:
-
-```yaml
-_timeline:
-  layers:       # add/create (implicit)
-  set:          # update existing
-  remove:       # delete existing
-```
-
-`set` and `remove` match layers by exact `name`.
+Recommended reading order:
+1. [Targets](/reference/targets) — where actions run (for now, `_timeline`)
+2. [Actions](/reference/actions) — what to do in that target (add, set, remove)
 
 ## Creation order
 
@@ -71,7 +64,7 @@ text: "null"    # not a null value
 
 ## Schema sections
 
-- [Actions](/reference/actions) — Add, update, and remove behavior in `_timeline`
+- [Targets](/reference/targets) — Destination blocks and default behavior
 - [Folders](/reference/folders) — Project folder structure
 - [Files](/reference/files) — Importing footage and assets
 - [Compositions](/reference/compositions) — Comp settings and structure
@@ -81,3 +74,4 @@ text: "null"    # not a null value
 - [Shapes](/reference/shapes) — Parametric shape layers
 - [Essential Graphics](/reference/essential-graphics) — MOGRT properties
 - [Markers](/reference/markers) — Composition markers
+- [Actions](/reference/actions) — Add, update, and remove behavior in `_timeline`
