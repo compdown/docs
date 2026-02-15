@@ -71,6 +71,7 @@ text: "null"    # not a null value
 
 ## Schema sections
 
+- [Actions](/reference/actions) — Add, update, and remove behavior in `_timeline`
 - [Folders](/reference/folders) — Project folder structure
 - [Files](/reference/files) — Importing footage and assets
 - [Compositions](/reference/compositions) — Comp settings and structure

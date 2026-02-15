@@ -28,6 +28,7 @@ export default defineConfig({
         text: 'Syntax',
         items: [
           { text: 'Overview', link: '/reference/' },
+          { text: 'Actions', link: '/reference/actions' },
           { text: 'Folders', link: '/reference/folders' },
           { text: 'Files', link: '/reference/files' },
           { text: 'Compositions', link: '/reference/compositions' },
