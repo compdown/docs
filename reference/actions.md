@@ -19,6 +19,10 @@ Default rule:
 - No action verb means **create/add**.
 - Action verbs are used only when you want to **modify** existing content.
 
+`_selected` supports:
+- `set` (patch all selected layers)
+- `remove: true` (delete all selected layers)
+
 ## 1) Add layers (implicit create)
 
 Use `layers` when you want to create new layers.
@@ -104,3 +108,18 @@ Execution order:
 1. `layers` (create)
 2. `set.layers` (update)
 3. `remove.layers` (delete)
+
+## Selected-layer actions
+
+```yaml
+_selected:
+  set:
+    transform:
+      opacity: 50
+  remove: true
+```
+
+Notes:
+- `_selected.set` applies the same patch to each selected layer.
+- `_selected.set` does not support `parent`.
+- `_selected` actions fail if no layers are selected.

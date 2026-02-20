@@ -31,16 +31,17 @@ That's it. You've created your first composition from text syntax.
 
 ## Understanding the structure
 
-A Compdown document has four optional top-level keys:
+A Compdown document has five optional top-level keys:
 
 ```yaml
 _timeline:  # Layers added to the active comp timeline (optional)
+_selected:  # Actions for currently selected layers (optional)
 folders:    # Project folders (optional)
 files:      # Imported footage (optional)
 compositions:  # Compositions with layers
 ```
 
-At least one must be present. For most workflows, you'll use either `compositions` or `_timeline`.
+At least one must be present. For most workflows, you'll use `compositions`, `_timeline`, or `_selected`.
 
 ### Add layers to the active timeline
 
@@ -73,6 +74,16 @@ _timeline:
   remove:
     layers:
       - name: background
+```
+
+For currently selected layers:
+
+```yaml
+_selected:
+  set:
+    transform:
+      opacity: 50
+  remove: true
 ```
 
 ### Composition properties

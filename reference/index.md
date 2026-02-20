@@ -5,10 +5,11 @@ Compdown syntax is YAML-based, but you can think of it as plain text instruction
 
 ## Document structure
 
-A Compdown document has four optional top-level keys:
+A Compdown document has five optional top-level keys:
 
 ```yaml
 _timeline:     # Add, update, or remove layers in the active composition timeline
+_selected:     # Update or remove currently selected layers
 folders:       # Project folder structure
 files:         # Imported footage and assets
 compositions:  # Compositions with layers
@@ -19,7 +20,7 @@ At least one must be present.
 ## Targets first, then actions
 
 Recommended reading order:
-1. [Targets](/reference/targets) — where actions run (for now, `_timeline`)
+1. [Targets](/reference/targets) — where actions run (`_timeline`, `_selected`)
 2. [Actions](/reference/actions) — what to do in that target (add, set, remove)
 
 ## Creation order

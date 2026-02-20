@@ -26,6 +26,8 @@ _timeline:
       - name: temp guide
 ```
 
+For selected-layer updates/removals, use `_selected` (see [Actions](/reference/actions)).
+
 Rules for `set/remove`:
 - Layers are matched by exact `name`.
 - If no layer matches, Compdown errors.

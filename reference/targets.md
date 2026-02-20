@@ -19,6 +19,17 @@ _timeline:
       text: Hello World
 ```
 
+## `_selected` target
+
+`_selected` points to the currently selected layers in the active composition timeline.
+
+```yaml
+_selected:
+  set:
+    transform:
+      opacity: 50
+```
+
 ## Default behavior
 
 Inside a target, if you provide items directly, Compdown creates/adds them.
@@ -51,7 +62,18 @@ _timeline:
       - name: Temp Layer
 ```
 
+Or update/remove selected layers:
+
+```yaml
+_selected:
+  set:
+    transform:
+      opacity: 50
+  remove: true
+```
+
 ## Error behavior
 
 - If no composition timeline is active, `_timeline` actions fail.
 - `set/remove` match by exact layer name and fail on no match or multiple matches.
+- `_selected` actions fail when no layers are selected.
