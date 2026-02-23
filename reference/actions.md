@@ -54,6 +54,9 @@ _timeline:
         transform:
           position: [960, 500]
           opacity: 85
+      - name: Intro Instance
+        essentialProperties:
+          Headline: "New headline"
 ```
 
 Matching rules:

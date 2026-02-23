@@ -82,6 +82,7 @@ These apply to all layer types:
 | _id      | string | no       | Reusable layer template id (within the same layer array) |
 | _extends | string | no       | Inherit from a layer `_id` in the same layer array |
 | name     | string | yes      | Layer name  |
+| essentialProperties | object | no (composition layers only) | Override Essential Graphics controller values on this precomp instance |
 
 ## Inheritance (`_id` / `_extends`)
 
@@ -109,6 +110,23 @@ Rules:
 - Duplicate `_id`, missing `_extends` targets, and circular inheritance fail validation.
 
 See [Inheritance](/reference/inheritance) for full inheritance behavior and additional examples.
+
+## Essential Graphics overrides (`essentialProperties`)
+
+Use `essentialProperties` on precomp instance layers (`composition` layers):
+
+```yaml
+- name: Intro Instance
+  composition: Intro
+  essentialProperties:
+    Headline: "New headline"
+    Accent Color: [1, 0.4, 0.2]
+```
+
+Rules:
+- Only valid on layers that use `composition`.
+- Keys are controller names shown in Essential Graphics.
+- Keys must match exactly one controller per layer.
 
 ### Timing
 

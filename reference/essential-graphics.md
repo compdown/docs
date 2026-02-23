@@ -1,10 +1,14 @@
 # Essential Graphics
 
-Expose layer properties to the Essential Graphics Panel for creating Motion Graphics Templates (.mogrt).
+Expose layer properties to the Essential Graphics Panel and override those controls on precomp instances.
 
 ## Overview
 
-Essential Graphics lets you create templates with editable properties that can be modified in Premiere Pro or other apps. Compdown supports adding properties to the panel and reading them back during export.
+Essential Graphics lets you create templates with editable properties that can be modified in Premiere Pro or other apps.
+
+Compdown supports two related workflows:
+- Define controls on a source composition with `essentialGraphics`.
+- Set control values on a nested precomp layer with `essentialProperties`.
 
 ## Basic usage
 
@@ -27,7 +31,33 @@ compositions:
       - bar.transform.opacity
 ```
 
-## Two forms
+## Override controls on a precomp instance
+
+Use `essentialProperties` on a layer that references another composition:
+
+```yaml
+compositions:
+  - name: Master Edit
+    layers:
+      - name: Lower Third Instance
+        composition: Lower Third
+        essentialProperties:
+          Headline: "Breaking Update"
+          Bar Blur: 12
+```
+
+### `essentialProperties` schema
+
+`essentialProperties` is a key/value object:
+- Key: controller name exactly as shown in Essential Graphics.
+- Value: number, boolean, string, or number array.
+
+Rules:
+- Only valid on `composition` layers.
+- Missing controller name throws an error.
+- Duplicate controller names on the same layer throw an error.
+
+## `essentialGraphics` forms
 
 ### Simple form (string)
 
@@ -166,4 +196,5 @@ compositions:
 - Not all properties can be added to Essential Graphics. Compdown checks `canAddToMotionGraphicsTemplate()` and silently skips unsupported properties.
 - Custom names (`addToMotionGraphicsTemplateAs()`) require After Effects CC 2019 (16.1) or later.
 - Legacy Essential Graphics entries created manually export as name-only objects without property paths.
+- `essentialProperties` works only when the precomp layer has exposed Essential Graphics controls.
 :::
