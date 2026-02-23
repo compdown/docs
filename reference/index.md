@@ -53,6 +53,20 @@ color: 000000  # Works as-is (normally YAML parses this as number)
 
 You don't need extra quotes around these values.
 
+### Tab indentation
+Compdown normalizes leading tab indentation to spaces before parsing.
+
+This means content like this still works:
+
+```yaml
+compositions:
+	- name: Main
+	  layers:
+	    - name: Title
+	      type: text
+	      text: Hello
+```
+
 ### Forcing string type
 Use quotes when a value should stay a string even if it looks like another data type:
 
