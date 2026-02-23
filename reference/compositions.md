@@ -6,6 +6,8 @@ Compositions are the core containers in After Effects — timelines that hold la
 
 | Property    | Type   | Required | Default    | Description            |
 |-------------|--------|----------|------------|------------------------|
+| _id         | string | no       |            | Reusable composition template id |
+| _extends    | string | no       |            | Inherit from a composition `_id` in the same array |
 | name        | string | yes      |            | Composition name       |
 | width       | int    | no       | 1920       | Width in pixels        |
 | height      | int    | no       | 1080       | Height in pixels       |
@@ -97,6 +99,28 @@ compositions:
 Compositions are created before layers, so forward references are allowed.
 Use unique composition names to avoid ambiguous references.
 :::
+
+## Inheritance (`_id` / `_extends`)
+
+Use `_id` to define a reusable base composition and `_extends` to inherit and override fields.
+
+```yaml
+compositions:
+  - _id: sceneBase
+    name: Scene-01
+    duration: 30
+    framerate: 24
+    color: ff8000
+
+  - _extends: sceneBase
+    name: Scene-02
+```
+
+Rules:
+- `_extends` can only target `_id` values in the same `compositions` array.
+- Object values are merged deeply.
+- Array values are replaced (not concatenated).
+- Duplicate `_id`, missing `_extends` targets, and circular inheritance fail validation.
 
 ## Placing in folders
 

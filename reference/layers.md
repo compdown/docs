@@ -79,7 +79,34 @@ These apply to all layer types:
 
 | Property | Type   | Required | Description |
 |----------|--------|----------|-------------|
+| _id      | string | no       | Reusable layer template id (within the same layer array) |
+| _extends | string | no       | Inherit from a layer `_id` in the same layer array |
 | name     | string | yes      | Layer name  |
+
+## Inheritance (`_id` / `_extends`)
+
+You can define base layer templates and derive new layers from them.
+
+```yaml
+_timeline:
+  layers:
+    - _id: textBase
+      name: Base
+      type: text
+      text: Hello
+      fontSize: 96
+
+    - _extends: textBase
+      name: Title
+      text: World
+```
+
+Rules:
+- Works in `compositions[].layers` and `_timeline.layers`.
+- `_extends` can only target `_id` values in the same layer array.
+- Object values are merged deeply.
+- Array values are replaced (not concatenated).
+- Duplicate `_id`, missing `_extends` targets, and circular inheritance fail validation.
 
 ### Timing
 
