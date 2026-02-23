@@ -122,6 +122,8 @@ Rules:
 - Array values are replaced (not concatenated).
 - Duplicate `_id`, missing `_extends` targets, and circular inheritance fail validation.
 
+See [Inheritance](/reference/inheritance) for full inheritance behavior and additional examples.
+
 ## Placing in folders
 
 Organize compositions in project folders:

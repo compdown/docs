@@ -22,6 +22,7 @@ At least one must be present.
 Recommended reading order:
 1. [Targets](/reference/targets) — where actions run (`_timeline`, `_selected`)
 2. [Actions](/reference/actions) — what to do in that target (add, set, remove)
+3. [Inheritance](/reference/inheritance) — how `_id` and `_extends` reuse base objects
 
 ## Creation order
 
@@ -90,3 +91,4 @@ text: "null"    # not a null value
 - [Essential Graphics](/reference/essential-graphics) — MOGRT properties
 - [Markers](/reference/markers) — Composition markers
 - [Actions](/reference/actions) — Add, update, and remove behavior in `_timeline`
+- [Inheritance](/reference/inheritance) — Reusable templates with `_id` and `_extends`

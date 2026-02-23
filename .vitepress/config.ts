@@ -48,6 +48,7 @@ export default defineConfig({
             items: [
               { text: 'Targets', link: '/reference/targets' },
               { text: 'Actions', link: '/reference/actions' },
+              { text: 'Inheritance', link: '/reference/inheritance' },
             ]
           },
         ]
