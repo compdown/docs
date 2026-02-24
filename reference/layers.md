@@ -127,6 +127,7 @@ Rules:
 - Only valid on layers that use `composition`.
 - Keys are controller names shown in Essential Graphics.
 - Keys must match exactly one controller per layer.
+- Color controllers accept hex strings like `ff0000` (or `#ff0000`).
 
 ### Timing
 

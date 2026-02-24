@@ -56,6 +56,7 @@ Rules:
 - Only valid on `composition` layers.
 - Missing controller name throws an error.
 - Duplicate controller names on the same layer throw an error.
+- Color controllers accept hex strings like `ff0000` (or `#ff0000`).
 
 ## `essentialGraphics` forms
 
